@@ -6,6 +6,7 @@ data/input/*
 data/output/*
 reports/*
 !.gitkeep
+data/qdrant/
 # Virtual environment
 venv/
 .venv/

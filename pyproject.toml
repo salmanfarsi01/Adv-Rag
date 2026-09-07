@@ -16,10 +16,12 @@ dependencies = [
 
 [project.optional-dependencies]
 paddle = ["paddleocr>=3.0", "paddlepaddle>=3.0"]
+retrieval = ["sentence-transformers>=3.0", "qdrant-client>=1.12"]
 dev = ["pytest>=8.0"]
 
 [project.scripts]
 ocr-pipeline = "ocr_pipeline.cli:main"
+ocr-retrieval = "ocr_pipeline.retrieval_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

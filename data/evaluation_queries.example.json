@@ -1,0 +1,10 @@
+[
+  {
+    "query": "What is the invoice total?",
+    "relevant_chunk_ids": ["invoice_00234:p1:c0"]
+  },
+  {
+    "query": "Which items are listed in the invoice table?",
+    "relevant_chunk_ids": ["invoice_00234:p1:c1"]
+  }
+]

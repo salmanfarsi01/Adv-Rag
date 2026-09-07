@@ -1,1 +1,1 @@
--e ".[paddle,dev]"
+-e ".[paddle,retrieval,dev]"
