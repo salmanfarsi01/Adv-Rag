@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocr-pipeline"
+version = "0.1.0"
+description = "Batch English PDF OCR with PaddleOCR and Tesseract fallback"
+requires-python = ">=3.10"
+dependencies = [
+  "pymupdf>=1.24",
+  "pytesseract>=0.3.13",
+  "Pillow>=10.0",
+  "pandas>=2.2",
+]
+
+[project.optional-dependencies]
+paddle = ["paddleocr>=3.0", "paddlepaddle>=3.0"]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+ocr-pipeline = "ocr_pipeline.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
